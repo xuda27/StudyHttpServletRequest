@@ -15,39 +15,33 @@
   	<servlet-class>eden.study.request.RequestDemo</servlet-class>
   </servlet>
   <servlet>
-    <description>This is the description of my J2EE component</description>
-    <display-name>This is the display name of my J2EE component</display-name>
     <servlet-name>RequestDemo1</servlet-name>
     <servlet-class>eden.study.request.RequestDemo1</servlet-class>
   </servlet>
   <servlet>
-    <description>This is the description of my J2EE component</description>
-    <display-name>This is the display name of my J2EE component</display-name>
     <servlet-name>RequestDemo2</servlet-name>
     <servlet-class>eden.study.request.RequestDemo2</servlet-class>
   </servlet>
   <servlet>
-    <description>This is the description of my J2EE component</description>
-    <display-name>This is the display name of my J2EE component</display-name>
     <servlet-name>MyRequestDispatcher</servlet-name>
     <servlet-class>eden.study.request.MyRequestDispatcher</servlet-class>
   </servlet>
   <servlet>
-    <description>This is the description of my J2EE component</description>
-    <display-name>This is the display name of my J2EE component</display-name>
     <servlet-name>MyRequestDispatcher1</servlet-name>
-    <servlet-class>eden.study.request.MyRequestDispatch1</servlet-class>
+    <servlet-class>eden.study.request.MyRequestDispatcher1</servlet-class>
   </servlet>
   <servlet>
-    <description>This is the description of my J2EE component</description>
-    <display-name>This is the display name of my J2EE component</display-name>
     <servlet-name>MyRequestDispatcher2</servlet-name>
     <servlet-class>eden.study.request.MyRequestDispatcher2</servlet-class>
   </servlet>
-
-
-
-
+  <servlet>
+    <servlet-name>MyRequest</servlet-name>
+    <servlet-class>eden.study.request.MyRequest</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>MyRequest1</servlet-name>
+    <servlet-class>eden.study.request.MyRequest1</servlet-class>
+  </servlet>
 
   <servlet-mapping>
   	<servlet-name>RequestDemo</servlet-name>
@@ -72,5 +66,13 @@
   <servlet-mapping>
     <servlet-name>MyRequestDispatcher2</servlet-name>
     <url-pattern>/servlet/MyRequestDispatcher2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MyRequest</servlet-name>
+    <url-pattern>/servlet/MyRequest</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MyRequest1</servlet-name>
+    <url-pattern>/servlet/MyRequest1</url-pattern>
   </servlet-mapping>
 </web-app>

@@ -13,13 +13,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
+/**
+ * 获得客户端请求的参数（即客户端提交的参数）
+ * request乱码问题解决
+ * @author eden
+ *
+ */
 public class RequestDemo extends HttpServlet  {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		//get方式请求  这样设置编码无效
+		//get方式请求  这样设置编码无效  需要自己手动设置
 //		req.setCharacterEncoding("utf-8");//设置服务器以UTF-8的编码接收数据
 		//为什么？
 		//web服务器(tomcat)对GET方式的数据提交采用的解码字符集是"ISO-8859-1" 
@@ -32,6 +37,7 @@ public class RequestDemo extends HttpServlet  {
 		for(String uname : unames){
 			
 			//get方式提交数据 要通过String类的getBytes方法进行编码转换
+			//首先用iso8859反向编码到原始数据后 再用utf8重新编码 从而得到中文
 			String uname1 = new String(uname.getBytes("iso-8859-1"),"utf-8");
 			System.out.println("用户"+(i++)+":"+uname1);
 		}

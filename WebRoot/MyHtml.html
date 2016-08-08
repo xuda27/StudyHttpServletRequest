@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>带数据给MyRequst1</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    
+    <!--这句代码没有用处啊  -->
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <!--使用带有 http-equiv 属性的 <meta> 标签时，服务器将把名称/值对添加到发送给浏览器的内容头部。 -->
+    <meta http-equiv='content-type' content='text/html;charset=UTF-8'/>
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+  	<a href="/JavaWeb_Servlet_Request_20160803/servlet/MyRequest1?uname=eden&pwd=123">点击</a>
+  	
+  	<form action = "/JavaWeb_Servlet_20160803/servlet/MyRequest1" method="post">
+  		用户名:<input type="text" name="uname"><br>
+  		密    码:<input type="password" name="pwd"><br>
+  		<input type="submit" value="提交">
+  	</form>
+  </body>
+</html>

@@ -7,7 +7,11 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+/**
+ * 请求转发
+ * @author eden
+ *
+ */
 public class MyRequestDispatcher extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -19,7 +23,8 @@ public class MyRequestDispatcher extends HttpServlet {
 			throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		response.setCharacterEncoding("utf-8");
-		//在request容器中存入一个属性值
+		
+		//在request容器中存入一个属性值 
 		request.setAttribute("text", "你好！中国！");//为什么乱码？
 				
 		//转发给RequestDispatch1进行读取
